@@ -9,6 +9,8 @@ This application may potentially trigger seizures for people with photosensitive
 ## Screenshots
 Main window.
 
+![alt text][screen001]
+
 ## Platforms
 ztimer3_wx was tested on these platforms:
 *   Linux
@@ -34,7 +36,5 @@ Run CMake and build ztimer3_wx:
   cmake .. -DCMAKE_BUILD_TYPE=Release
   make
   ```
-
-![alt text][screen001]
 
 [screen001]: https://github.com/peter15914/ztimer3_wx/blob/master/img/ztimer3_wx_001.png "ztimer3_wx - Main window"
