@@ -2,6 +2,7 @@
 #define ZTESTWXAPP_H
 
 #include <wx/app.h>
+#include <memory>
 
 class zTestWxDialog;
 class wxFileConfig;
@@ -10,7 +11,7 @@ class zTestWxApp : public wxApp
 {
 
 public:
-	zTestWxDialog* main_dlg;	//temp
+    zTestWxDialog *main_dlg;
 
 	zTestWxApp();
 	virtual ~zTestWxApp();

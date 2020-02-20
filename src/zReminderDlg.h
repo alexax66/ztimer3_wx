@@ -1,5 +1,9 @@
 #pragma once
 
+#include <wx/frame.h>
+#include <wx/button.h>
+#include <wx/menu.h>
+
 #include "zTimerServ/zTimerServ.h"
 
 class iTimeChooser;

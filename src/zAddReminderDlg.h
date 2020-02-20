@@ -1,5 +1,11 @@
 #pragma once
 
+#include <wx/frame.h>
+#include <wx/timectrl.h>
+#include <wx/button.h>
+#include <wx/textctrl.h>
+#include <wx/checkbox.h>
+
 class iTimeChooser;
 
 class zAddReminderDlg: public wxFrame

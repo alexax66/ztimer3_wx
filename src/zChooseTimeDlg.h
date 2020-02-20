@@ -1,5 +1,9 @@
 #pragma once
 
+#include <wx/dialog.h>
+#include <wx/timectrl.h>
+#include <wx/button.h>
+
 class iTimeChooser;
 
 class zChooseTimeDlg: public wxDialog

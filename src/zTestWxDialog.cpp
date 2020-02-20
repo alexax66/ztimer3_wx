@@ -216,7 +216,7 @@ void zTestWxDialog::ShowTrayIcon(bool doShow)
 #ifdef __WINDOWS__
 	if (doShow)
 	{
-		wxIcon trayIcon(_T("main.ico"), wxBITMAP_TYPE_ICO);
+        wxIcon trayIcon(_T("main.ico"), wxBITMAP_TYPE_ICO);
 		taskBarIcon.SetIcon(trayIcon);
 	}
 	else

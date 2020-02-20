@@ -1,5 +1,8 @@
 #pragma once
 
+#include <wx/longlong.h>
+#include <vector>
+
 #include "iTimerParent.h"
 #include "iOSTimer.h"
 

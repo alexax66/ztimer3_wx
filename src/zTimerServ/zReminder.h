@@ -1,5 +1,6 @@
 #pragma once
 
+#include <wx/longlong.h>
 
 class zReminder
 {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <wx/menu.h>
+
 class zTimerServ;
 
 class zContextMenu : public wxMenu

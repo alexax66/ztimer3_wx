@@ -1,5 +1,6 @@
 #pragma once
 
+#include <wx/dcbuffer.h>
 
 #include "zTestWxApp.h"
 

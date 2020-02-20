@@ -3,7 +3,7 @@
 #include "zTimerServ.h"
 #include "time_utils.h"
 
-#include "../zConfig.h"
+#include "zConfig.h"
 
 
 

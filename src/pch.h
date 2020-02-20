@@ -1,4 +1,6 @@
-﻿#include "wx/wxprec.h"
+﻿#pragma once
+
+#include "wx/wxprec.h"
 
 #include <wx/longlong.h>
 #include <wx/time.h>
@@ -12,6 +14,3 @@
 #include <wx/textctrl.h>
 #include <wx/menu.h>
 #include <wx/checkbox.h>
-
-
-#include <vector>	//temp

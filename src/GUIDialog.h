@@ -19,7 +19,8 @@
 //---------------------------------------------------------------------------------------
 class GUIDialog : public wxFrame
 {
-	typedef wxFrame BaseClass;
+    typedef wxFrame BaseClass;
+    //typedef wxDialog BaseClass;
 
     DECLARE_EVENT_TABLE()
     private:
