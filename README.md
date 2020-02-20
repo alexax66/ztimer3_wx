@@ -16,7 +16,7 @@ ztimer3_wx was tested on these platforms:
 *   Linux
 *   Windows
 
-### Building on Linux
+## Building on Linux
 To build ztimer3_wx on your computer you will need these packages:
 *   wxWidgets 3.0 or later
 *   The build-essential package 
