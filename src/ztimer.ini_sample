@@ -1,0 +1,11 @@
+[main]
+local_options=1
+
+[add_times]
+times_cnt=6
+time_0=3
+time_1=5
+time_2=10
+time_3=20
+time_4=40
+time_5=60
