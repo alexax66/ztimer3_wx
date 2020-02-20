@@ -30,12 +30,12 @@ bool zTestWxApp::OnInit()
     //SetVendorName(wxT("zzz"));
     SetAppName(wxT("ztimer3_wx beta"));
 
-	zConfig::inst().Init();
+    zConfig::inst().Init();
 
-	//
-	wxWindow* parent = 0;
-	int id = wxID_ANY;
-	wxString title = wxT("zTimer3_wx 0.10");
+    //
+    wxWindow* parent = 0;
+    int id = wxID_ANY;
+    wxString title = wxT("zTimer3_wx 0.10");
 
 #ifdef __WINDOWS__
     wxSize size = wxSize(250, 19);
@@ -61,17 +61,17 @@ bool zTestWxApp::OnInit()
     if (zConfig::inst().get_int_val("window/style_wxSTAY_ON_TOP", 0))
         style |= wxSTAY_ON_TOP;
 
-	wxPoint pos = zConfig::inst().get_dialog_pos();
+    wxPoint pos = zConfig::inst().get_dialog_pos();
     main_dlg = new zTestWxDialog(parent, id, title,pos , size, style);
 
-	main_dlg->Show();
+    main_dlg->Show();
 
-	return true;
+    return true;
 }
 
 void zTestWxApp::OnEndSession(wxCloseEvent& evt)
 {
-	//wxLogDebug( wxT("zTestWxApp::OnEndSession") );
-	evt.Skip();
+    //wxLogDebug( wxT("zTestWxApp::OnEndSession") );
+    evt.Skip();
 }
 

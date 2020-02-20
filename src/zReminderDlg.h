@@ -10,37 +10,37 @@ class iTimeChooser;
 
 class zReminderDlg: public wxFrame
 {
-	iTimeChooser* chooser;
-	zTimerServ& timer_serv;
+    iTimeChooser* chooser;
+    zTimerServ& timer_serv;
 
     DECLARE_EVENT_TABLE()
 
-	wxButton btnOK;
-	wxButton btnDelete;
-	wxButton btnSkip;
-	//wxTextCtrl label;
+    wxButton btnOK;
+    wxButton btnDelete;
+    wxButton btnSkip;
+    //wxTextCtrl label;
 
-	wxMenu skip_menu;
+    wxMenu skip_menu;
 
-	int reminder_ind;
+    int reminder_ind;
 
-	wxLongLong m_prev_refresh_time;
+    wxLongLong m_prev_refresh_time;
 
 public:
-	zReminderDlg(iTimeChooser* _chooser, zTimerServ& _timer_serv, wxSize parent_size);
-	virtual ~zReminderDlg();
+    zReminderDlg(iTimeChooser* _chooser, zTimerServ& _timer_serv, wxSize parent_size);
+    virtual ~zReminderDlg();
 
-	void Init();
-	void set_reminder(int ind);
+    void Init();
+    void set_reminder(int ind);
 
-	void OnTimer();
+    void OnTimer();
 
 protected:
-	virtual void OnPaint(wxPaintEvent& evt);
+    virtual void OnPaint(wxPaintEvent& evt);
 
     void OnButtonClick(wxCommandEvent& evt);
-	void OnMenuRange(wxCommandEvent &evt);
+    void OnMenuRange(wxCommandEvent &evt);
 
-	void _create_Controls(wxSize parent_size);
+    void _create_Controls(wxSize parent_size);
 };
 

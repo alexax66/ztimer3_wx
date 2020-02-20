@@ -6,44 +6,44 @@
    
    
 OSTimer::OSTimer() :
-	parent(0),
-	interval_msec(-1)
+    parent(0),
+    interval_msec(-1)
 {
 }
 
 
 OSTimer::~OSTimer()
 {
-	stop();
+    stop();
 }
 
 
 void OSTimer::set_parent(iTimerParent* _parent)
 {
-	parent = _parent;
+    parent = _parent;
 };
 
 
 void OSTimer::set_interval(int milliseconds)
 {
-	interval_msec = milliseconds;
+    interval_msec = milliseconds;
 }
 
 
 void OSTimer::start()
 {
-	Start(interval_msec);
+    Start(interval_msec);
 }
 
 
 void OSTimer::stop()
 {
-	Stop();
+    Stop();
 }
 
 
 void OSTimer::Notify()
 {
-	if (parent)
-		parent->OnTimer();
+    if (parent)
+        parent->OnTimer();
 }

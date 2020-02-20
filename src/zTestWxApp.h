@@ -13,13 +13,13 @@ class zTestWxApp : public wxApp
 public:
     zTestWxDialog *main_dlg;
 
-	zTestWxApp();
-	virtual ~zTestWxApp();
+    zTestWxApp();
+    virtual ~zTestWxApp();
 
-	virtual bool OnInit();
-	virtual void OnEndSession(wxCloseEvent& evt);
+    virtual bool OnInit();
+    virtual void OnEndSession(wxCloseEvent& evt);
 
-	DECLARE_EVENT_TABLE();
+    DECLARE_EVENT_TABLE();
 private:
 };
 

@@ -35,14 +35,14 @@ class GUIDialog : public wxFrame
         virtual void OnAbout( wxCommandEvent& event ){ event.Skip(); }
         virtual void OnQuit( wxCommandEvent& event ){ event.Skip(); }
         virtual void OnLeftDown(wxMouseEvent &evt){ evt.Skip(); }
-		virtual void OnLeftUp(wxMouseEvent &evt){ evt.Skip(); }
+        virtual void OnLeftUp(wxMouseEvent &evt){ evt.Skip(); }
         virtual void OnLeftDClick(wxMouseEvent &evt){ evt.Skip(); }
         virtual void OnRightDown(wxMouseEvent &event){ event.Skip(); }
-		virtual void OnPaint(wxPaintEvent& event){ event.Skip(); }
-		virtual void OnMouseMove(wxMouseEvent &evt){ evt.Skip(); }
-		virtual void OnMove(wxMoveEvent &evt){ evt.Skip(); }
-		virtual void OnMouseCaptureLost(wxMouseCaptureLostEvent& evt){ evt.Skip(); }
-		virtual void OnFocus(wxFocusEvent& evt){ evt.Skip(); }
+        virtual void OnPaint(wxPaintEvent& event){ event.Skip(); }
+        virtual void OnMouseMove(wxMouseEvent &evt){ evt.Skip(); }
+        virtual void OnMove(wxMoveEvent &evt){ evt.Skip(); }
+        virtual void OnMouseCaptureLost(wxMouseCaptureLostEvent& evt){ evt.Skip(); }
+        virtual void OnFocus(wxFocusEvent& evt){ evt.Skip(); }
 
         virtual void OnMenuRange(wxCommandEvent &event){ event.Skip(); }
 

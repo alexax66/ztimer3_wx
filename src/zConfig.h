@@ -9,26 +9,26 @@ class zTimerServ;
 
 class zConfig
 {
-	wxFileConfig *m_pConfig;
-	wxFileConfig *m_pGlobOptions;
+    wxFileConfig *m_pConfig;
+    wxFileConfig *m_pGlobOptions;
 
-	std::vector<int> add_times;
+    std::vector<int> add_times;
 
 public:
-	zConfig();
-	virtual ~zConfig();
+    zConfig();
+    virtual ~zConfig();
 
-	void Init();
+    void Init();
 
-	static zConfig& inst();
+    static zConfig& inst();
 
-	wxPoint get_dialog_pos();
-	void set_dialog_pos(wxPoint point);
+    wxPoint get_dialog_pos();
+    void set_dialog_pos(wxPoint point);
 
-	const std::vector<int>& get_add_times();
+    const std::vector<int>& get_add_times();
 
-	int get_is_show_curtime();
-	void set_is_show_curtime(int val);
+    int get_is_show_curtime();
+    void set_is_show_curtime(int val);
 
     void set_int_val(const wxString& key, int val);
     int get_int_val(const wxString& key, int dflt_val);
@@ -39,12 +39,12 @@ public:
     void set_string_val(const wxString& key, const wxString& val);
     wxString get_string_val(const wxString& key, const wxString& dflt_val);
 
-	void save_reminders(zTimerServ& timer_serv, bool on_del);
-	void load_reminders(zTimerServ& timer_serv);
+    void save_reminders(zTimerServ& timer_serv, bool on_del);
+    void load_reminders(zTimerServ& timer_serv);
 
-	void flush();
+    void flush();
 
 private:
-	void _create_options();
-	void _load_options();
+    void _create_options();
+    void _load_options();
 };

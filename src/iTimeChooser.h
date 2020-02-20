@@ -5,6 +5,6 @@
 class iTimeChooser
 {
 public:
-	virtual void OnTimeChoose(wxDateTime _time) = 0;
-	virtual void OnReminderAdd(wxLongLong msec, const wxString& text, bool exact_time) = 0;
+    virtual void OnTimeChoose(wxDateTime _time) = 0;
+    virtual void OnReminderAdd(wxLongLong msec, const wxString& text, bool exact_time) = 0;
 };

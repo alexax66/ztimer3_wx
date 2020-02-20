@@ -4,5 +4,5 @@
 class iTimerParent
 {
 public:
-	virtual void OnTimer() = 0;
+    virtual void OnTimer() = 0;
 };

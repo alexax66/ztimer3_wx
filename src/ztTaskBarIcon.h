@@ -5,11 +5,11 @@
 class ztTaskBarIcon : public wxTaskBarIcon
 {
 public:
-	ztTaskBarIcon();
-	wxMenu* CreatePopupMenu();
+    ztTaskBarIcon();
+    wxMenu* CreatePopupMenu();
 
-	void OnLeftUp(wxTaskBarIconEvent& evt);
-	void OnMenuItemClick(wxCommandEvent& evt);
+    void OnLeftUp(wxTaskBarIconEvent& evt);
+    void OnMenuItemClick(wxCommandEvent& evt);
 
-	DECLARE_EVENT_TABLE()
+    DECLARE_EVENT_TABLE()
 };

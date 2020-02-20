@@ -9,16 +9,16 @@ class iTimerParent;
 
 class OSTimer: public wxTimer, public iOSTimer
 {
-	iTimerParent* parent;
+    iTimerParent* parent;
 
-	int interval_msec;
+    int interval_msec;
 
 public:
     OSTimer();
     virtual ~OSTimer();
 
     void set_parent(iTimerParent* _parent);
-	virtual void set_interval(int milliseconds=-1);
+    virtual void set_interval(int milliseconds=-1);
     virtual void start();
     virtual void stop();
 
