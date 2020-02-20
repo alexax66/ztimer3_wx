@@ -9,6 +9,32 @@ This application may potentially trigger seizures for people with photosensitive
 ## Screenshots
 Main window.
 
+## Platforms
+ztimer3_wx was tested on these platforms:
+*   Linux
+*   Windows
+
+### Building on Linux
+To build ztimer3_wx on your computer you will need these packages:
+*   wxWidgets 3.0 or later
+*   The build-essential package 
+*   CMake
+*   Git
+
+Git clone the sources:
+
+    git clone https://github.com/peter15914/ztimer3_wx.git
+
+Run CMake and build ztimer3_wx:
+
+  ```bash
+  cd ztimer3_wx
+  mkdir build-release
+  cd build-release
+  cmake .. -DCMAKE_BUILD_TYPE=Release
+  make
+  ```
+
 ![alt text][screen001]
 
 [screen001]: https://github.com/peter15914/ztimer3_wx/blob/master/img/ztimer3_wx_001.png "ztimer3_wx - Main window"
