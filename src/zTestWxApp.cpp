@@ -1,5 +1,7 @@
 #include "pch.h"
 
+#include <wx/apptrait.h>
+
 #include "zTestWxApp.h"
 #include "zTestWxDialog.h"
 #include "zConfig.h"
@@ -13,7 +15,7 @@ END_EVENT_TABLE()
 
 
 zTestWxApp::zTestWxApp() :
-	main_dlg(0)
+    main_dlg(0)
 {
 }
 
@@ -35,16 +37,33 @@ bool zTestWxApp::OnInit()
 	int id = wxID_ANY;
 	wxString title = wxT("zTimer3_wx 0.10");
 
-	//
-	wxSize size = wxSize(250, 19);//wxDefaultSize;
-	int style = /*wxSTAY_ON_TOP | */wxNO_BORDER | wxFRAME_NO_TASKBAR;//wxDEFAULT_DIALOG_STYLE );
-
 #ifdef __WINDOWS__
-    style |= wxFRAME_NO_TASKBAR;
-#endif // __WINDOWS__
+    wxSize size = wxSize(250, 19);
+    int style = wxNO_BORDER | wxFRAME_NO_TASKBAR | wxSTAY_ON_TOP;
+#elif __LINUX__
+
+    wxSize size = wxSize(250, 19);
+    //wxSize size = wxDefaultSize;
+
+    wxString desktop;
+    if (wxGetEnv("XDG_CURRENT_DESKTOP", &desktop))
+    {
+        //problem with window height on xfce
+        if (desktop.Upper().Find("XFCE") != wxNOT_FOUND)
+            size = wxSize(250, 52);
+    }
+
+    int style = wxNO_BORDER | wxSTAY_ON_TOP;//wxDEFAULT_DIALOG_STYLE );
+#endif
+
+    if (zConfig::inst().get_int_val("window/style_wxFRAME_NO_TASKBAR", 0))
+        style |= wxFRAME_NO_TASKBAR;
+    if (zConfig::inst().get_int_val("window/style_wxSTAY_ON_TOP", 0))
+        style |= wxSTAY_ON_TOP;
 
 	wxPoint pos = zConfig::inst().get_dialog_pos();
-	main_dlg = new zTestWxDialog(parent, id, title,pos , size, style);
+    main_dlg = new zTestWxDialog(parent, id, title,pos , size, style);
+
 	main_dlg->Show();
 
 	return true;
