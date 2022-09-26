@@ -60,30 +60,30 @@ public:
     zTestWxDialog(wxWindow* parent, int id, wxString title, wxPoint pos, wxSize size, int style);
     ~zTestWxDialog();
 
-    virtual void OnTimer();
+    virtual void OnTimer() override;
 
     void ShowTrayIcon(bool doShow = true);
 
-    virtual bool AcceptsFocus() const;
+    virtual bool AcceptsFocus() const override;
 
 private:
-    virtual void OnClose(wxCloseEvent& evt);
-    virtual void OnQuit(wxCommandEvent& evt);
-    virtual void OnAbout(wxCommandEvent& evt);
+    virtual void OnClose(wxCloseEvent& evt) override;
+    virtual void OnQuit(wxCommandEvent& evt) override;
+    virtual void OnAbout(wxCommandEvent& evt) override;
 
-    virtual void OnLeftDown(wxMouseEvent &evt);
-    virtual void OnLeftUp(wxMouseEvent &evt);
-    virtual void OnLeftDClick(wxMouseEvent &evt);
-    virtual void OnRightDown(wxMouseEvent &evt);
-    virtual void OnPaint(wxPaintEvent& evt);
-    virtual void OnMouseMove(wxMouseEvent &evt);
-    virtual void OnMouseCaptureLost(wxMouseCaptureLostEvent& evt);
-    virtual void OnMove(wxMoveEvent &evt);
-    virtual void OnFocus(wxFocusEvent& evt);
+    virtual void OnLeftDown(wxMouseEvent &evt) override;
+    virtual void OnLeftUp(wxMouseEvent &evt) override;
+    virtual void OnLeftDClick(wxMouseEvent &evt) override;
+    virtual void OnRightDown(wxMouseEvent &evt) override;
+    virtual void OnPaint(wxPaintEvent& evt) override;
+    virtual void OnMouseMove(wxMouseEvent &evt) override;
+    virtual void OnMouseCaptureLost(wxMouseCaptureLostEvent& evt) override;
+    virtual void OnMove(wxMoveEvent &evt) override;
+    virtual void OnFocus(wxFocusEvent& evt) override;
 
-    virtual void OnMenuRange(wxCommandEvent &evt);
+    virtual void OnMenuRange(wxCommandEvent &evt) override;
 
-    virtual void OnTimeChoose(wxDateTime _time);
+    virtual void OnTimeChoose(wxDateTime _time) override;
     virtual void OnReminderAdd(wxLongLong msec, const wxString& text, bool exact_time) override;
 
     int _draw_buttons(wxAutoBufferedPaintDC& dc, int x);

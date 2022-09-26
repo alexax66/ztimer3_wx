@@ -149,7 +149,7 @@ void zReminderDlg::OnTimer()
     if (m_prev_refresh_time == LL_EMPTY_VAL || cur_time - m_prev_refresh_time > 200)
     {
         Refresh(false);
-        m_prev_refresh_time == cur_time;
+        m_prev_refresh_time = cur_time;
     }
 }
 

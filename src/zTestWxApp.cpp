@@ -14,9 +14,19 @@ BEGIN_EVENT_TABLE(zTestWxApp, wxApp)
 END_EVENT_TABLE()
 
 
+// static void TempAssertHandler(const wxString& file,
+// 		int line, const wxString& func,
+// 		const wxString& cond, const wxString& msg)
+// {
+// 	// fprintf(stderr, "TempAssertHandler: file='%ls' line=%d func='%ls' cond='%ls' msg='%ls'\n",
+// 	// 		file.wc_str(), line, func.wc_str(), cond.wc_str(), msg.wc_str());
+// }
+
+
 zTestWxApp::zTestWxApp() :
     main_dlg(0)
 {
+    // wxSetAssertHandler(TempAssertHandler);
 }
 
 

@@ -202,7 +202,7 @@ void zTestWxDialog::OnTimer()
     context_menu.refresh_reminders_submenu(timer_serv);
 
     _check_on_top();
-    process_keys_workaround();
+    // process_keys_workaround();
 
     Refresh(false);
 }
