@@ -4,8 +4,7 @@
 
 #include "zTimerServ/zTimerServ.h"
 
-   
-   
+
 zConfig::zConfig() :
     m_pConfig(0),
     m_pGlobOptions(0)

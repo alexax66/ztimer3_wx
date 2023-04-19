@@ -3,8 +3,7 @@
 #include "OSTimer.h"
 #include "zTimerServ/iTimerParent.h"
 
-   
-   
+
 OSTimer::OSTimer() :
     parent(0),
     interval_msec(-1)
