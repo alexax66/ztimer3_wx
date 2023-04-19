@@ -50,7 +50,7 @@ bool zTestWxApp::OnInit()
 #ifdef __WINDOWS__
     wxSize size = wxSize(250, 19);
     int style = wxNO_BORDER | wxFRAME_NO_TASKBAR | wxSTAY_ON_TOP;
-#elif __LINUX__
+#elif defined(__FreeBSD__) || defined(__LINUX__)
 
     wxSize size = wxSize(250, 19);
     //wxSize size = wxDefaultSize;
