@@ -14,9 +14,10 @@ Main window.
 ## Platforms
 ztimer3_wx was tested on these platforms:
 *   Linux
+*   FreeBSD
 *   Windows
 
-## Building on Linux
+## Building on Linux and FreeBSD
 To build ztimer3_wx on your computer you will need these packages:
 *   wxWidgets 3.0 or later
 *   The build-essential package 
